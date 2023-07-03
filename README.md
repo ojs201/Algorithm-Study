@@ -21,6 +21,9 @@
 GitHub을 활용한 제출 방법은 아래의 링크를 통해 확인합니다.
 
 
+"스터디를 위한 초기 설정" 파트를 가장 먼저 확인해주시면 됩니다. (반드시 clone을 마친 후 Omega 폴더를 본인의 닉네임으로 변경 후 과제를 진행해주시기 바랍니다!)
+
+
 https://www.notion.so/Algorithm-Study-with-GitHub-057ec3e6437249d989adb476c1f3a973
 
 
