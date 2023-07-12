@@ -1,28 +1,48 @@
 # 문자열 뒤집기
 
 data = list(map(int, input()))
-zero_group_num = 0
-one_group_num = 0
+cnt0 = 0
+cnt1 = 0
 result = 0
 
 for i in range(0, len(data) - 1):
     if data[i] == data[i + 1]:
         if i == len(data) - 2:
             if data[i] == 0:
-                zero_group_num += 1
+                cnt0 += 1
             else:
-                one_group_num += 1
+                cnt1 += 1
     else:
         if i == len(data) - 2:
-            zero_group_num += 1
-            one_group_num += 1
+            cnt0 += 1
+            cnt1 += 1
         else:
             if data[i] == 0:
-                zero_group_num += 1
+                cnt0 += 1
             else:
-                one_group_num += 1
+                cnt1 += 1
 
-result = one_group_num if zero_group_num > one_group_num else zero_group_num
+result = cnt1 if cnt0 > cnt1 else cnt0
 print(result)
 
+"""
+#다른 방법
 
+# 바뀌는 구간이 1번만 있는 경우를 고려. ex) 00100인 경우
+if data[0] == '0':
+    cnt1 += 1
+else:
+    cnt0 += 1
+
+# 현재 문자가 다음 문자와 다를 때, 현재문자가 0이면 0에서 1로 바뀐다는 의미이므로 cnt0에 1을 더함
+for i in range(len(data) - 1):
+    if data[i] != data[i + 1]:
+        if data[i] == '0':
+            cnt0 += 1
+        else:
+            cnt1 += 1
+    else:
+        continue
+
+print(min(cnt0, cnt1))
+"""
