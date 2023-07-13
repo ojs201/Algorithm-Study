@@ -12,3 +12,6 @@ for i in data:
         result += 1 #그룹결성
         count = 0 
 print(result)
+
+
+
