@@ -21,7 +21,8 @@ for i in range(length-1):
         else:
             count1 += 1
             print(count0, count1)    
-print(min(count0, count1))
+print(min(count0, count1)) #결과화면
+
                          
         
         
