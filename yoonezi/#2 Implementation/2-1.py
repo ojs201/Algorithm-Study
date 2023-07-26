@@ -19,7 +19,7 @@ for i in arr:
         if x < n:
             x += 1
 
-# print(x , y)
+print(x , y)
 
 # n = int(input())
 # moves = input().split()
