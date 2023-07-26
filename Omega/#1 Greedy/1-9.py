@@ -18,6 +18,8 @@ print(count)
 
 
 """
+# 모범 답안
+
 n,m = map(int,input().split())
 arr = list(map(int,input().split()))
  
