@@ -22,11 +22,11 @@ selected = list(combinations(chicken, m))
 def chicken_sum(selected):
     result = 0
     # 모든 집에 대하여
-    for hx, hy in house:
+    for a, b in house:
         # 가장 가까운 치킨집을 찾기
         temp = 2e9
-        for cx, cy in selected:
-            temp = min(temp, abs(hx - cx) + abs(hy - cy)) # abs(hx - cx) + abs(hy - cy) = 집과 선택된 치킨집 사이의 거리
+        for c, d in selected:
+            temp = min(temp, abs(a - c) + abs(b - d)) # abs(a - c) + abs(b - d) = 집과 선택된 치킨집 사이의 거리
         # 각 경우에 대한 가장 가까운 치킨집까지의 거리를 모두 더하기
         result += temp
     return result
