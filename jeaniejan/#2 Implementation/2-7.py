@@ -15,4 +15,4 @@ def solution(s):
                 cnt=1
         com+=str(cnt)+prev if cnt>=2 else prev
         ans=min(ans,len(com))
-return ans
+    return ans
