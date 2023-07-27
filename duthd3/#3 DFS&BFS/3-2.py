@@ -11,8 +11,8 @@ board = []
 for i in range(n):
     board.append(list(map(int, input())))
 
-dx = [-1, 1, 0 , 0]
-dy = [0, 0, -1, 1]
+dx = [-1, 1, 0 , 0] #상하
+dy = [0, 0, -1, 1] #좌우
 
 
 def bfs(x, y):
@@ -21,7 +21,7 @@ def bfs(x, y):
     
     while queue:
         x, y = queue.popleft()
-        for i in range(n):
+        for i in range(4):
             nx = x + dx[i]
             ny = y + dx[i]
             
@@ -35,5 +35,4 @@ def bfs(x, y):
     return board[n-1][m-1]
                     
 print(bfs(0,0))
-            
             
