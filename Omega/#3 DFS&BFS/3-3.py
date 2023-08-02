@@ -36,3 +36,5 @@ if k in distance:
       print(i)
 else:
   print(-1)
+
+print(distance)
