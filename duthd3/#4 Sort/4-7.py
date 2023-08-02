@@ -1,10 +1,19 @@
+import heapq
+
 n = int(input())
+result = 0
 arr = []
 for i in range(n):
-    data = int(input())
-    arr.append(data)
+    heapq.heappush(arr, int(input()))
 
-arr.sort()
-for i in range(n):
+print(arr)
+
     
- 
+for i in range(n-1):
+    prev = heapq.heappop(arr)
+    cur = heapq.heappop(arr)
+    
+    result += prev + cur
+    heapq.heappush(arr, prev + cur)
+
+print(result)
