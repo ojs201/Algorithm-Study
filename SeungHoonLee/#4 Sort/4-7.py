@@ -2,15 +2,13 @@
 4-7. 카드 정렬하기
 https://www.acmicpc.net/problem/1715
 
-1.
+풀이:
+1. 주어진 숫자를 오름차 순으로 정렬한다.
+2. 정렬된 숫자들을 2개씩 뽑아 더한다.
+3. 이후 남은 집합에 대해 동일한 연산을 수행한다.
 """
 from sys import stdin
 from heapq import heapify, heappush, heappop
-
-# E.G. 10, 20, 40, 50
-# => (10 + 30 + 70 + 120) - 10 = 220
-# E.G. 10, 20, 40, 50, 70
-# => (10 + 30 + 70 + 120 + 190) - 10 = ...
 
 if __name__ == '__main__':
     _, *nums = map(int, stdin.readlines())
