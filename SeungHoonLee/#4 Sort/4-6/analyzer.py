@@ -16,11 +16,11 @@ class FailureRateAnalyzer:
         return users
 
     def analyze(self) -> List:
-        curr_users: int = self.nums_user
+        nums_user: int = self.nums_user
         rates: Dict = {}
 
-        for stage, failed_user in self.stage_users.items():
-            rates[stage] = failed_user / curr_users if failed_user != 0 else 0
-            curr_users -= failed_user
+        for stage, users in self.stage_users.items():
+            rates[stage] = users / nums_user if users != 0 else 0
+            nums_user -= users
 
         return sorted(rates, key=lambda x: rates[x], reverse=True)

@@ -28,13 +28,6 @@ class LyricsFinder:
 
     def execute_query(self, q):
         n = len(q)
-
-        if q[0] != '?':
-            return count_between(
-                self.lyrics[n],
-                q.replace('?', 'a'), q.replace('?', 'z')
-            )
-        return count_between(
-            self.r_lyrics[n],
-            q[::-1].replace('?', 'a'), q[::-1].replace('?', 'z')
-        )
+        words = self.lyrics[n] if q[0] != '?' else self.r_lyrics[n]
+        query = q if q[0] != '?' else q[::-1]
+        return count_between(words, query.replace('?', 'a'), query.replace('?', 'z'))
