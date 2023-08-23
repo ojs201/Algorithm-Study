@@ -35,6 +35,7 @@ n = int(input())
 # arr.sort()
 # # print(arr)
 # sum = 0
+
 card = []
 for _ in range(n):
     heapq.heappush(card, int(input()))
