@@ -23,8 +23,6 @@ for k in range(N + 1):
         for j in range(N + 1):
             cost[i][j] = min(cost[i][j],cost[i][k] + cost[k][j])
 
-# print(cost)
-
 for i in range(1, N + 1):
     for j in range(1, N + 1):
         if cost[i][j] == int(1e9):
