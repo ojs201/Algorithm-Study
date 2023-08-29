@@ -1,21 +1,23 @@
 #공유기 설치
 def Count(len):
     cnt=1
-    ep=Line[0]
+    ep=arr[0]
     for i in range(1,n):
-        if Line[i]-ep>=len:
+        if arr[i]-ep>=len:
             cnt+=1
-            ep=Line[i]
+            ep=arr[i]
     return cnt
+
 n,c=map(int,input().split())
-Line=[]
+arr=[]
 
 for _ in range(n):
     tmp=int(input())
-    Line.append(tmp)
-Line.sort()
+    arr.append(tmp)
+arr.sort()
 lt=1
-rt=Line[n-1]
+rt=arr[n-1]
+
 while lt<=rt:
     mid=(lt+rt)//2
     if Count(mid)>=c:
